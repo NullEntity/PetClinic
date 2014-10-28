@@ -31,8 +31,6 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.grpOptions = new System.Windows.Forms.GroupBox();
-            this.lblTotal = new System.Windows.Forms.Label();
-            this.lblTotalDesc = new System.Windows.Forms.Label();
             this.pcsService8 = new PetClinic.ctlPetClinicService();
             this.pcsService7 = new PetClinic.ctlPetClinicService();
             this.pcsService6 = new PetClinic.ctlPetClinicService();
@@ -41,12 +39,15 @@
             this.pcsService3 = new PetClinic.ctlPetClinicService();
             this.pcsService2 = new PetClinic.ctlPetClinicService();
             this.pcsService1 = new PetClinic.ctlPetClinicService();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.lblTotalDesc = new System.Windows.Forms.Label();
             this.grpOptions.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnExit
             // 
             this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnExit.Location = new System.Drawing.Point(187, 255);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 23);
@@ -85,26 +86,6 @@
             this.grpOptions.TabIndex = 0;
             this.grpOptions.TabStop = false;
             this.grpOptions.Text = "Options";
-            // 
-            // lblTotal
-            // 
-            this.lblTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTotal.Location = new System.Drawing.Point(205, 236);
-            this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(56, 13);
-            this.lblTotal.TabIndex = 2;
-            this.lblTotal.Text = "$0.00";
-            this.lblTotal.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // lblTotalDesc
-            // 
-            this.lblTotalDesc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTotalDesc.AutoSize = true;
-            this.lblTotalDesc.Location = new System.Drawing.Point(165, 236);
-            this.lblTotalDesc.Name = "lblTotalDesc";
-            this.lblTotalDesc.Size = new System.Drawing.Size(34, 13);
-            this.lblTotalDesc.TabIndex = 1;
-            this.lblTotalDesc.Text = "Total:";
             // 
             // pcsService8
             // 
@@ -226,10 +207,31 @@
             0,
             0});
             // 
+            // lblTotal
+            // 
+            this.lblTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTotal.Location = new System.Drawing.Point(205, 236);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(56, 13);
+            this.lblTotal.TabIndex = 2;
+            this.lblTotal.Text = "$0.00";
+            this.lblTotal.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // lblTotalDesc
+            // 
+            this.lblTotalDesc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTotalDesc.AutoSize = true;
+            this.lblTotalDesc.Location = new System.Drawing.Point(165, 236);
+            this.lblTotalDesc.Name = "lblTotalDesc";
+            this.lblTotalDesc.Size = new System.Drawing.Size(34, 13);
+            this.lblTotalDesc.TabIndex = 1;
+            this.lblTotalDesc.Text = "Total:";
+            // 
             // frmPetClinic
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnClear;
             this.ClientSize = new System.Drawing.Size(274, 290);
             this.Controls.Add(this.lblTotalDesc);
             this.Controls.Add(this.lblTotal);
